@@ -22,31 +22,31 @@
     <div class="layui-form-item">
         <label class="layui-form-label">车型</label>
         <div class="layui-input-block">
-            <input type="text" name="models" lay-verify="title" autocomplete="off" placeholder="请输入汽车车型" class="layui-input">
+            <input type="text" id="models" name="models" lay-verify="title" autocomplete="off" placeholder="请输入汽车车型" class="layui-input">
         </div>
         <br>
 
         <label class="layui-form-label">价格</label>
         <div class="layui-input-block">
-            <input type="text" name="price" lay-verify="title" autocomplete="off" placeholder="请输入汽车价格" class="layui-input">
+            <input type="text" id="price" name="price" lay-verify="title" autocomplete="off" placeholder="请输入汽车价格" class="layui-input">
         </div>
         <br>
 
         <label class="layui-form-label">尺寸</label>
         <div class="layui-input-block">
-            <input type="text" name="size" lay-verify="title" autocomplete="off" placeholder="请输入汽车尺寸" class="layui-input">
+            <input type="text" id="size" name="size" lay-verify="title" autocomplete="off" placeholder="请输入汽车尺寸" class="layui-input">
         </div>
         <br>
 
         <label class="layui-form-label">油耗</label>
         <div class="layui-input-block">
-            <input type="text" name="fuel_consumption" lay-verify="title" autocomplete="off" placeholder="请输入汽车油耗" class="layui-input">
+            <input type="text" id="fuel_consumption" name="fuel_consumption" lay-verify="title" autocomplete="off" placeholder="请输入汽车油耗" class="layui-input">
         </div>
         <br>
 
         <label class="layui-form-label">数量</label>
         <div class="layui-input-block">
-            <input type="text" name="number" lay-verify="title" autocomplete="off" placeholder="请输入汽车数量" class="layui-input">
+            <input type="text" id="number" name="number" lay-verify="title" autocomplete="off" placeholder="请输入汽车数量" class="layui-input">
         </div>
 
     </div>
@@ -54,10 +54,34 @@
 
     <div class="layui-form-item">
         <div class="layui-input-block">
-            <input type="submit"class="layui-btn" value="立即提交">
+            <input type="submit"class="layui-btn" value="立即提交" id="addCar">
             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
         </div>
     </div>
 </form>
+<%--<script>
+    $("#addCar").click(function () {
+        var models = $("#models").val();
+        var price = $("#price").val();
+        var size = $("#size").val();
+        var fuel_consumption = $("#fuel_consumption").val();
+        var number = $("#number").val();
+        $.post("/addCarServlet",
+            {
+                models : models ,
+                price : price ,
+                size : size ,
+                fuel_consumption : fuel_consumption ,
+                number : number
+            },
+            function ( data ,status) {
+            alert(data)
+            }
+        );
+
+    })
+
+</script>--%>
+
 </body>
 </html>

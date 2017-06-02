@@ -42,26 +42,28 @@
         <thead id="add">
         <tr>
 
-            <th>人物</th>
-            <th>民族</th>
-            <th>出场时间</th>
-            <th>格言</th>
+            <th>车型</th>
+            <th>价格</th>
+            <th>尺寸</th>
+            <th>油耗</th>
             <th>数量</th>
             <th>操作</th>
         </tr>
         </thead>
         <tbody>
+
         <tr>
-            <td>贤心</td>
-            <td>汉族</td>
-            <td>1989-10-14</td>
-            <td>人生似修行</td>
-            <td></td>
+            <td>${pageContext.request.getAttribute("carList")[0]}</td>
+            <td>${pageContext.request.getAttribute("carList")}</td>
+            <td>${pageContext.request.getAttribute("carList")}</td>
+            <td>${pageContext.request.getAttribute("carList")}</td>
+            <td>${pageContext.request.getAttribute("carList")}</td>
             <td>
                     <a href="/car/modifyCar.jsp" class="layui-btn">修改该数据</a>
                     <button class="layui-btn layui-btn-danger" id="delCar">删除该数据</button>
             </td>
         </tr>
+
         </tbody>
     </table>
 </div>

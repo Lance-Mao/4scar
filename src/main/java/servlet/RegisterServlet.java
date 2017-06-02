@@ -36,10 +36,15 @@ public class RegisterServlet extends HttpServlet {
         System.out.println(admin);
 
         //判断数据库是否存在相同的用户名
-        if (adminService.inquire(admin)){
+        if (adminService.determineUserName(admin)){
             //如果不存在，将其保存到数据库中
             adminService.save(admin);
             System.out.println(admin);
+            response.sendRedirect("/car/loginOrregister.jsp#tologin");
+
+        }else {
+            request.setAttribute("info","登录失败！用户名已存在！");
+            response.getWriter().println();
         }
     }
 

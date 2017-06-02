@@ -1,7 +1,6 @@
 package dao;
 
 import entity.Admin;
-import org.junit.Test;
 import util.DBConnection;
 
 import java.sql.Connection;
@@ -19,14 +18,8 @@ public class AdminDao1 {
      * 在用户提交注册信息时，需要判断该用户名是否存在
      * 返回一个boolean类型的值
      */
-    @Test
-    public void aaa(){
-        Connection conn = DBConnection.getConn();
-        System.out.println(conn);
-    }
     public boolean inquire(Admin admin){
         Connection conn = DBConnection.getConn();
-        System.out.println("-----------:"+conn);
         //根据指定的用户名查询信息
         String sql = "select * from Admin where username = ?";
 
@@ -50,6 +43,29 @@ public class AdminDao1 {
             DBConnection.closeConn(conn);
         }
 
+        return false;
+    }
+
+    /**
+     * 在登录时，判断用户输入的用户名与密码是否输入正确
+     * 返回一个boolean
+     */
+    public boolean determineUAndP(Admin admin){
+        Connection conn = DBConnection.getConn();
+        String sql = "select * from Admin where username = ? AND password = ?";
+
+        try {
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, admin.getUsername());
+            pst.setString(2, admin.getPassword());
+            ResultSet rs = pst.executeQuery();
+            System.out.println(rs);
+            if (rs.next()){
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return false;
     }
 

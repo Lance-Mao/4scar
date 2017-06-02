@@ -1,8 +1,7 @@
 package servlet;
 
-import dao.CarDao;
 import entity.Car;
-import net.sf.json.JSONArray;
+import service.CarService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,34 +16,52 @@ import java.util.List;
  */
 @WebServlet(name = "addCarServlet",urlPatterns = "/addCarServlet")
 public class addCarServlet extends HttpServlet {
+    private CarService carService = new CarService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //设置字符编码集
-        request.setCharacterEncoding("utf-8");
-        response.setContentType("text/html;charset=utf-8");
+        try {
+            request.setCharacterEncoding("utf-8");
+            response.setContentType("text/html;charset=utf-8");
 
-        //请求获取提交的参数
-        String models = request.getParameter("models");
-        System.out.println(models);
-        String price = request.getParameter("price");
-        String size = request.getParameter("size");
-        String fuel_consumption = request.getParameter("fuel_consumption");
-        int number = Integer.parseInt(request.getParameter("number"));
+            //请求获取提交的参数
+            String models = request.getParameter("models");
+            System.out.println(models);
+            String price = request.getParameter("price");
+            String size = request.getParameter("size");
+            String fuel_consumption = request.getParameter("fuel_consumption");
+            int number = Integer.parseInt(request.getParameter("number"));
 
-        Car car = new Car();
-        car.setModels(models);
-        car.setPrice(price);
-        car.setSize(size);
-        car.setFuel_consumption(fuel_consumption);
-        car.setNumber(number);
+            Car car = new Car();
+            car.setModels(models);
+            car.setPrice(price);
+            car.setSize(size);
+            car.setFuel_consumption(fuel_consumption);
+            car.setNumber(number);
 
+            //将数据保存到数据库中
+            carService.saveCar(car);
+            //获取数据库查询的信息
+            List<Car> carList = carService.result();
+            System.out.println(carList);
+//            JSONArray jsonArray = JSONArray.fromObject(carList);
+//            request.getSession().setAttribute("carList",carList);
+//            response.sendRedirect("/car/index.jsp");
+            request.setAttribute("carList",carList);
+            request.getRequestDispatcher("/car/index.jsp").forward(request, response);
 
+//            PrintWriter out = response.getWriter();
+//            //将数据拼接成JSON格式
+//            out.print(carList);
+//            out.flush();
+//            out.close();
 
-        CarDao carDao = new CarDao();
-        //将数据保存到数据库中
-        carDao.save(car);
-        //获取数据库查询的信息
-        List<Car> carList  = carDao.result();
-        JSONArray jsonArray = JSONArray.fromObject(carList);
-        response.getWriter().println(jsonArray);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doGet(req, resp);
     }
 }

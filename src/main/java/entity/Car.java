@@ -3,13 +3,13 @@ package entity;
 /**
  * Created by pc on 17-5-23.
  */
-public class Car {
+public class Car extends Admin {
 
     private int id;
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "{" +
                 "id=" + id +
                 ", models='" + models + '\'' +
                 ", price='" + price + '\'' +

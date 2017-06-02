@@ -5,11 +5,12 @@
   Time: 下午2:28
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 
 <head>
     <title>4S汽车管理系统</title>
+    <script type="text/javascript" src="Jquery/jquery-1.8.0.js"></script>
     <meta charset="UTF-8" />
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
 
@@ -32,12 +33,13 @@
            <a class="hiddenanchor" id="tologin"></a>
             <div id="wrapper">
                 <div id="login" class="animate form">
-                    <form  action="${pageContext.request.contextPath}/LoginServlet" autocomplete="on" method="post">
+                    <form  action="${pageContext.request.contextPath}/LoginServlet" method="post">
                         <h1>Log in</h1>
                         <p>
                             <label for="username" class="uname" data-icon="u" > Your email or username </label>
                             <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
                         </p>
+                        <span style="color: red;">${pageContext.session.getAttribute("info")}</span>
                         <p>
                             <label for="password" class="youpasswd" data-icon="p"> Your password </label>
                             <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
@@ -63,6 +65,7 @@
                         <p>
                             <label for="usernamesignup" class="uname" data-icon="u">用户名</label>
                             <input id="usernamesignup" name="username" required="required" type="text" placeholder="请输入用户名" />
+                            <span id="infoName"></span>
                         </p>
 
                         <p>
@@ -86,6 +89,11 @@
         </div>
     </section>
 </div>
+
+<script>
+
+
+</script>
 
 </body>
 </html>
