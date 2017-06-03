@@ -20,7 +20,7 @@ public class CarDao {
 
 
     /**
-     * 查询汽车信息，将查询到的信息保存到List集合中，回调到页面
+         * 查询汽车信息，将查询到的信息保存到List集合中，回调到页面
      * @return
      */
     public List<Car> result() {
@@ -33,7 +33,7 @@ public class CarDao {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             while (rs.next()) {
-                car = new Car();
+//                car = new Car(models, price, size, fuel_consumption, number);
                 car.setId(rs.getInt(1));
                 car.setModels(rs.getString(2));
                 car.setPrice(rs.getString(3));
@@ -75,4 +75,29 @@ public class CarDao {
         }
     }
 
+    /**
+     * 修改汽车信息
+     */
+    public void modify(Car car){
+        conn = DBConnection.getConn();
+        String sql = "update car set price = ?,size = ?,fuel_consumption = ?,number = ? where models = ?";
+        try {
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1,car.getPrice());
+            pstm.setString(2,car.getSize());
+            pstm.setString(3,car.getFuel_consumption());
+            pstm.setInt(4,car.getNumber());
+            pstm.setString(5,car.getModels());
+            pstm.executeUpdate();
+            pstm.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBConnection.closeConn(conn);
+        }
+    }
+
+    /**
+     * 删除汽车信息
+     */
 }

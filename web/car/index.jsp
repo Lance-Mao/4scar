@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: pc
@@ -25,23 +26,18 @@
 
 <script type="text/javascript">
     $("#add").append("<tr> <th>
-
 </script>
 <div class="layui-form" id="aaa">
     <table class="layui-table">
         <colgroup width="350">
-
-
             <col width="100">
             <col width="250">
             <col width="250">
             <col width="250">
             <col width="250"/>
-
         </colgroup>
         <thead id="add">
         <tr>
-
             <th>车型</th>
             <th>价格</th>
             <th>尺寸</th>
@@ -51,7 +47,6 @@
         </tr>
         </thead>
         <tbody>
-
         <tr>
             <td>${pageContext.request.getAttribute("carList")[0]}</td>
             <td>${pageContext.request.getAttribute("carList")}</td>
@@ -59,11 +54,10 @@
             <td>${pageContext.request.getAttribute("carList")}</td>
             <td>${pageContext.request.getAttribute("carList")}</td>
             <td>
-                    <a href="/car/modifyCar.jsp" class="layui-btn">修改该数据</a>
-                    <button class="layui-btn layui-btn-danger" id="delCar">删除该数据</button>
+                <a href="/car/modifyCar.jsp" class="layui-btn">修改该数据</a>
+                <button class="layui-btn layui-btn-danger" id="delCar">删除该数据</button>
             </td>
         </tr>
-
         </tbody>
     </table>
 </div>

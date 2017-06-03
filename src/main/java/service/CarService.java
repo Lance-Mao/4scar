@@ -20,4 +20,11 @@ public class CarService {
     public List<Car> result() {
         return carDao.result();
     }
+
+    /**
+     * 修改汽车信息
+     */
+    public void modify(Car car){
+        carDao.modify(car);
+    }
 }

@@ -6,6 +6,22 @@ package entity;
 public class Car extends Admin {
 
     private int id;
+    private String models;
+    private String price;
+    private String size;
+    private String fuel_consumption;
+    private int number;
+
+    public Car() {
+    }
+
+    public Car(String models, String price, String size, String fuel_consumption, int number) {
+        this.models = models;
+        this.price = price;
+        this.size = size;
+        this.fuel_consumption = fuel_consumption;
+        this.number = number;
+    }
 
     @Override
     public String toString() {
@@ -18,14 +34,6 @@ public class Car extends Admin {
                 ", number=" + number +
                 '}';
     }
-
-    private String models;
-    private String price;
-    private String size;
-    private String fuel_consumption;
-    private int number;
-
-
     public int getId() {
         return id;
     }

@@ -31,7 +31,7 @@ public class addCarServlet extends HttpServlet {
             String fuel_consumption = request.getParameter("fuel_consumption");
             int number = Integer.parseInt(request.getParameter("number"));
 
-            Car car = new Car();
+            Car car = new Car(models, price, size, fuel_consumption, number);
             car.setModels(models);
             car.setPrice(price);
             car.setSize(size);
