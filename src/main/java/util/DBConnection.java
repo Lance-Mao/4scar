@@ -18,7 +18,7 @@ public class DBConnection {
         }
 
         try {
-            String url = "jdbc:mysql://localhost:3306/carSystem";
+            String url = "jdbc:mysql://localhost:3306/carSystem?useUnicode=true&characterEncoding=UTF-8";
             conn = DriverManager.getConnection(url, "root", "root");
             if (conn != null) {
                 System.out.println("数据库连接成功！");

@@ -1,7 +1,9 @@
 package servlet;
 
 import entity.Admin;
+import entity.Car;
 import service.AdminService;
+import service.CarService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by pc on 17-5-23.
@@ -16,6 +19,7 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/LoginServlet")
 public class LoginServlet extends HttpServlet {
     private AdminService adminService = new AdminService();
+    private CarService carService = new CarService();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //设置字符编码集
@@ -35,10 +39,11 @@ public class LoginServlet extends HttpServlet {
         if (adminService.determineUAndP(admin)) {
 //            request.setAttribute("info", "登录成功！");
 //            request.getRequestDispatcher("/car/index.jsp").forward(request, response);
-            response.sendRedirect("/car/index.jsp");
+            List<Car> carList = carService.result();
+            System.out.println(carList);
+            request.setAttribute("carList",carList);
+            request.getRequestDispatcher("/car/index.jsp").forward(request, response);
         } else {
-
-
            request.getSession().setAttribute("info", "登录失败！");
             response.sendRedirect("/car/loginOrregister.jsp");
         }

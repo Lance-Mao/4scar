@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "ModifyServlet",urlPatterns = "/ModifyServlet")
 public class ModifyServlet extends HttpServlet {
@@ -19,19 +20,16 @@ public class ModifyServlet extends HttpServlet {
        try {
            req.setCharacterEncoding("utf-8");
            resp.setContentType("text/html;charset=utf-8");
-           System.out.println(1111111111);
-           String models = req.getParameter("models ");
-           String price = req.getParameter("price ");
-           String size = req.getParameter("size ");
-           System.out.println(models);
-           System.out.println(price);
-           String fuel_consumption = req.getParameter("fuel_consumption ");
-           int number = Integer.parseInt(req.getParameter("number "));
-           System.out.println(0000);
+           String models = req.getParameter("models");
+           String price = req.getParameter("price");
+           String size = req.getParameter("size");
+           String fuel_consumption = req.getParameter("fuel_consumption");
+           int number = Integer.parseInt(req.getParameter("number"));
            Car car = new Car(models, price, size, fuel_consumption,number);
-           System.out.println(1111);
            carService.modify(car);
-           System.out.println(123);
+           List<Car> carList = carService.result();
+           req.setAttribute("carList",carList);
+           req.getRequestDispatcher("/car/index.jsp").forward(req, resp);
        }catch (Exception e){
            e.printStackTrace();
        }

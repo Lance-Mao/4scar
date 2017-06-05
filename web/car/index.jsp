@@ -1,4 +1,5 @@
-
+<%@ page import="java.util.List" %>
+<%@ page import="entity.Car" %>
 <%--
   Created by IntelliJ IDEA.
   User: pc
@@ -25,19 +26,20 @@
 
 
 <script type="text/javascript">
-    $("#add").append("<tr> <th>
+    $("#add").append("<tr> <th>);
 </script>
 <div class="layui-form" id="aaa">
-    <table class="layui-table">
+    <table class="layui-table" id="test">
         <colgroup width="350">
             <col width="100">
-            <col width="250">
-            <col width="250">
-            <col width="250">
-            <col width="250"/>
+            <col width="200">
+            <col width="200">
+            <col width="200">
+            <col width="200"/>
         </colgroup>
         <thead id="add">
         <tr>
+            <th>编号</th>
             <th>车型</th>
             <th>价格</th>
             <th>尺寸</th>
@@ -47,19 +49,38 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>${pageContext.request.getAttribute("carList")[0]}</td>
-            <td>${pageContext.request.getAttribute("carList")}</td>
-            <td>${pageContext.request.getAttribute("carList")}</td>
-            <td>${pageContext.request.getAttribute("carList")}</td>
-            <td>${pageContext.request.getAttribute("carList")}</td>
+        <%
+            List<Car> carList = (List<Car>) request.getAttribute("carList");
+            for (Car list : carList){
+        %>
+        <tr id="test2">
+            <td><%=list.getId()%></td>
+            <td><%=list.getModels()%></td>
+            <td><%=list.getPrice()%></td>
+            <td><%=list.getSize()%></td>
+            <td><%=list.getFuel_consumption()%></td>
+            <td><%=list.getNumber()%></td>
             <td>
                 <a href="/car/modifyCar.jsp" class="layui-btn">修改该数据</a>
                 <button class="layui-btn layui-btn-danger" id="delCar">删除该数据</button>
             </td>
         </tr>
+        <%
+            }
+        %>
         </tbody>
     </table>
 </div>
+
+<script>
+
+    $(function(){
+        $("table#test tr").click(function() {
+            $(this).remove();
+        });
+    });
+</script>
+
+
 </body>
 </html>

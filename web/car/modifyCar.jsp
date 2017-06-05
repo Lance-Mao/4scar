@@ -2,10 +2,10 @@
   Created by IntelliJ IDEA.
   User: pc
   Date: 17-5-23
-  Time: 下午7:32
+  Time: 下午7:31
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>修改汽车信息</title>
@@ -14,100 +14,74 @@
     <link rel="stylesheet" href="/car/layui/layui.js">
 </head>
 <body>
-
-<form action="/ModifyServlet" method="post" class="layui-form" >
-    请输入您要修改的车型：<input type="text" id="models" name="models">
-    <div class="layui-form-item">
-        <br>
-        <br>
-        <br>
-        请修改该以下参数
-        <br>
-        <br>
-        <br>
-
-        <label class="layui-form-label">价格</label>
-        <div class="layui-input-block">
-            <input type="text" id="price" name="price" lay-verify="title" autocomplete="off" placeholder="请输入汽车价格"
-                   class="layui-input">
-        </div>
-        <br>
-
-        <label class="layui-form-label">尺寸</label>
-        <div class="layui-input-block">
-            <input type="text" id="size" name="size" lay-verify="title" autocomplete="off" placeholder="请输入汽车尺寸"
-                   class="layui-input">
-        </div>
-        <br>
-
-        <label class="layui-form-label">油耗</label>
-        <div class="layui-input-block">
-            <input type="text" id="fuel_consumption" name="fuel_consumption" lay-verify="title" autocomplete="off" placeholder="请输入汽车油耗"
-                   class="layui-input">
-        </div>
-        <br>
-
-        <label class="layui-form-label">数量</label>
-        <div class="layui-input-block">
-            <input type="text" id="number" name="number" lay-verify="title" autocomplete="off" placeholder="请输入汽车数量"
-                   class="layui-input">
-        </div>
-
-    </div>
-
-
-    <div class="layui-form-item">
-        <div class="layui-input-block">
-            <input type="submit" class="layui-btn" value="确认修改">
-            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-        </div>
-    </div>
-</form>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>修改汽车相关信息</legend>
+</fieldset>
 
 <form class="layui-form" action="/ModifyServlet" method="post">
-    请输入您要修改的车型：<input type="text">
     <div class="layui-form-item">
-        <label class="layui-form-label">价格</label>
-        <div class="layui-input-block">
-            <input type="text" name="price" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+        <label class="layui-form-label" style="width: auto">要修改的车型：</label>
+        <div class="layui-input-block" style="width: 500px;margin-left: 140px">
+            <input type="text" id="models" name="models" lay-verify="title" autocomplete="off" placeholder="请输入汽车车型" class="layui-input">
+        </div>
+        <br>
+
+        <label class="layui-form-label" style="width: auto">价格：</label>
+        <div class="layui-input-block"  style="width: 500px;margin-left: 140px">
+            <input type="text" id="price" name="price" lay-verify="title" autocomplete="off" placeholder="请输入汽车价格" class="layui-input">
+        </div>
+        <br>
+
+        <label class="layui-form-label" style="width: auto">尺寸：</label>
+        <div class="layui-input-block"  style="width: 500px;margin-left: 140px">
+            <input type="text" id="size" name="size" lay-verify="title" autocomplete="off" placeholder="请输入汽车尺寸" class="layui-input">
+        </div>
+        <br>
+
+        <label class="layui-form-label" style="width: auto">油耗：</label>
+        <div class="layui-input-block"  style="width: 500px;margin-left: 140px">
+            <input type="text" id="fuel_consumption" name="fuel_consumption" lay-verify="title" autocomplete="off" placeholder="请输入汽车油耗" class="layui-input">
+        </div>
+        <br>
+
+        <label class="layui-form-label" style="width: auto">数量：</label>
+        <div class="layui-input-block"  style="width: 500px;margin-left: 140px">
+            <input type="text" id="number" name="number" lay-verify="title" autocomplete="off" placeholder="请输入汽车数量" class="layui-input">
         </div>
 
-        <label class="layui-form-label">尺寸</label>
-        <div class="layui-input-block">
-            <input type="text" name="size" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
-        </div>
-
-        <label class="layui-form-label">油耗</label>
-        <div class="layui-input-block">
-            <input type="text" name="fuel_consumption" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
-        </div>
-
-        <label class="layui-form-label">数量</label>
-        <div class="layui-input-block">
-            <input type="text" name="number" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
-        </div>
     </div>
 
+
     <div class="layui-form-item">
         <div class="layui-input-block">
-            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+            <input type="submit"class="layui-btn" value="立即提交" id="addCar">
             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
         </div>
     </div>
 </form>
+<%--<script>
+    $("#addCar").click(function () {
+        var models = $("#models").val();
+        var price = $("#price").val();
+        var size = $("#size").val();
+        var fuel_consumption = $("#fuel_consumption").val();
+        var number = $("#number").val();
+        $.post("/addCarServlet",
+            {
+                models : models ,
+                price : price ,
+                size : size ,
+                fuel_consumption : fuel_consumption ,
+                number : number
+            },
+            function ( data ,status) {
+            alert(data)
+            }
+        );
 
-<script>
-    //Demo
-    layui.use('form', function(){
-        var form = layui.form();
+    })
 
-        //监听提交
-        form.on('submit(formDemo)', function(data){
-            layer.msg(JSON.stringify(data.field));
-            return false;
-        });
-    });
-</script>
+</script>--%>
 
 </body>
 </html>

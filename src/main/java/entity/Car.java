@@ -12,7 +12,14 @@ public class Car extends Admin {
     private String fuel_consumption;
     private int number;
 
-    public Car() {
+    public Car(){
+
+    }
+    public Car(String models, String price, String size, String fuel_consumption) {
+        this.models = models;
+        this.price = price;
+        this.size = size;
+        this.fuel_consumption = fuel_consumption;
     }
 
     public Car(String models, String price, String size, String fuel_consumption, int number) {

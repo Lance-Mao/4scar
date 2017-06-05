@@ -1,5 +1,6 @@
 package dao;
 
+import entity.Admin;
 import entity.Car;
 import util.DBConnection;
 
@@ -20,11 +21,11 @@ public class CarDao {
 
 
     /**
-         * 查询汽车信息，将查询到的信息保存到List集合中，回调到页面
+     * 查询汽车信息，将查询到的信息保存到List集合中，回调到页面
      * @return
      */
     public List<Car> result() {
-        Car car = null;
+
         List<Car> list = new LinkedList<Car>();
         conn = DBConnection.getConn();
 
@@ -33,7 +34,7 @@ public class CarDao {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             while (rs.next()) {
-//                car = new Car(models, price, size, fuel_consumption, number);
+                Car car = new Car();
                 car.setId(rs.getInt(1));
                 car.setModels(rs.getString(2));
                 car.setPrice(rs.getString(3));
@@ -100,4 +101,7 @@ public class CarDao {
     /**
      * 删除汽车信息
      */
+    public void delCar(Admin admin){
+
+    }
 }
