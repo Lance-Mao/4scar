@@ -7,49 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e79333fd-1faf-4f14-a76a-3c76d310350d" name="Default" comment="windows commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/commons-beanutils-1.8.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/commons-collections-3.2.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/commons-dbutils-1.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/commons-lang-2.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/commons-logging-1.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/ezmorph-1.0.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/hamcrest-core-1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/json-lib-2.4-jdk15.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/junit-4.12.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/dump.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/dao/AdminDao1.class" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/dao/AdminDao1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/dao/CarDao.class" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/dao/CarDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/entity/Car.class" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/entity/Car.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/servlet/ModifyServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/servlet/ModifyServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/util/DBConnection.class" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/WEB-INF/classes/util/DBConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/AdminDao1.class" afterPath="$PROJECT_DIR$/target/classes/dao/AdminDao1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/CarDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/CarDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/entity/Car.class" afterPath="$PROJECT_DIR$/target/classes/entity/Car.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlet/LoginServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlet/LoginServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlet/ModifyServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlet/ModifyServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/DBConnection.class" afterPath="$PROJECT_DIR$/target/classes/util/DBConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/autoManagement_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/autoManagement_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/36a10568-a619-48a4-acce-dfe17bb670ef.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/36a10568-a619-48a4-acce-dfe17bb670ef.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autoManagement.iml" afterPath="$PROJECT_DIR$/autoManagement.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/car/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/car/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/car/modifyCar.jsp" afterPath="$PROJECT_DIR$/out/artifacts/autoManagement_war_exploded/car/modifyCar.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/CarDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/CarDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/Car.java" afterPath="$PROJECT_DIR$/src/main/java/entity/Car.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlet/ModifyServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/ModifyServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/util/DBConnection.java" afterPath="$PROJECT_DIR$/src/main/java/util/DBConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/car/index.jsp" afterPath="$PROJECT_DIR$/web/car/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/car/modifyCar.jsp" afterPath="$PROJECT_DIR$/web/car/modifyCar.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -817,7 +775,7 @@
       <workItem from="1496566281744" duration="526000" />
       <workItem from="1496577837724" duration="1676000" />
       <workItem from="1496651482720" duration="2935000" />
-      <workItem from="1496657186501" duration="131000" />
+      <workItem from="1496657186501" duration="566000" />
     </task>
     <servers />
   </component>
@@ -842,7 +800,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64952000" />
+    <option name="totallyTimeSpent" value="65387000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
